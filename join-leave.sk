@@ -1,0 +1,9 @@
+# RETRIES
+# DEVELOPED BY: BRAY
+# DISCORD:@bray#5871
+
+on join:
+  broadcast "&c&l+ &b%player's name%"
+  
+on leave:
+  broadcast "&c&l- &b%player's name%"
