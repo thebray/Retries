@@ -1,0 +1,11 @@
+# RETRIES
+# HOME COMMANDS
+#
+
+command /sethome:
+    trigger:
+        set {home} to location of player
+ 
+command /home:
+    trigger:
+        teleport player to {home}
