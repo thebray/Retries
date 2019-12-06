@@ -1,0 +1,35 @@
+if player has permission "retries.pvp.bypass"
+victim has the permission "admin":
+	send "&CYou're attacking an admin!" to attacker
+
+command /creeperclear:
+        permission: retries.staff.srmod
+        permission message: &c&l(!) &b&lRETRIES &eYou don't have the required permissions.
+          trigger:
+            kill all creepers in the player's world
+            
+command /chestfinder:
+        permission: retries.staff.mod
+        trigger:
+               loop blocks in radius 3 around player:
+                     loop-block is a chest
+                      message "There is a chest at %location of loop-block%"
+ 
+# STAFF CHAT
+
+command /staffchatinfo:
+    aliases: /scinfo, /sci
+    trigger:
+        message "&6&l(!) » &fStaff Chat made by Braden."
+        message "&6&l(!) » &fCurrent Version: &81.0"
+
+command /staffchat [<text>]:
+    aliases: /sc, /a
+    permission: retries.staffchat
+    permission message: &c&l(!) &b&lSTAFF RETRIES » &eYou don't have the required permissions.
+    trigger:
+        loop all players:
+            if loop-player has permission "retries.staffchat":
+                send "&6StaffChat &8» &8%player's display name%&7: %arg 1%" to loop-player
+                
+# STAFF CHAT
